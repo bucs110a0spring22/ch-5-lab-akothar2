@@ -24,14 +24,50 @@ Functions you must implement:
   playDarts(myturtle=None) - a simulated game of darts between two players
   montePi(myturtle=None, num_darts=0) - simulation algorithm returns the approximation of pi
 '''
-import turtle
+import turtle as turtle
 import random
 import time
 
 #########################################################
 #                   Your Code Goes Below                #
 #########################################################
+sides_square = 4
+int_angle_square = 90
+east = 0
 
+def drawSquare(myturtle=None, width=0, top_left_x=0, top_left_y=0):
+  turtle.penup()
+  turtle.setheading(east)
+  turtle.goto(top_left_x, top_left_y)
+  turtle.pendown()
+  for side in range(sides_square):
+    turtle.forward(width)
+    turtle.right(int_angle_square)
+  turtle.penup()
+
+def drawLine(myturtle=None, x_start=0, y_start=0, x_end=0, y_end=0):
+    turtle.penup()
+    turtle.goto(x_start, y_start)
+    turtle.pendown()
+    turtle.goto(x_end, y_end)
+    turtle.penup()
+
+def drawCircle(myturtle=None, radius=0):
+    turtle.setheading(east)
+    turtle.pendown()
+    turtle.circle(radius)
+    turtle.penup()
+
+def setUpDartboard(myscreen=None, myturtle=None):
+    turtle.setworldcoordinates(-2,-2,2,2)
+    drawSquare(turtle,2,-1,1)
+    drawLine(turtle, -1,0,1,0)
+    drawLine(turtle,0,1,0,-1)
+    drawCircle(turtle,1)
+
+
+  
+  
 
 
 #########################################################
