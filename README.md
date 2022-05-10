@@ -8,7 +8,7 @@
 _Replace anything surrounded by the `< >` symbols._
 
 ## SUMMARY:
- < Provide a short description of your program's functionality. No more than a couple sentences. >
+ < The main goals of this lab were to use turtle to create a dartboard and randomly throw darts at it. We then used a montepi and boolean function to determine if the dart landed on the virtual dartboard.>
 
 ## GRACE DAYS
 Grace days used for this assignment: < # >
@@ -16,7 +16,7 @@ Grace days used for this assignment: < # >
 Grace days remaining: < # >/5
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
- < What parts of the project you were not able to complete >
+ < I was not able to complete the playDarts function.  >
 
 ## REFERENCES:
  < List any outside resources used >
