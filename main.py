@@ -65,9 +65,27 @@ def setUpDartboard(myscreen=None, myturtle=None):
     drawLine(turtle,0,1,0,-1)
     drawCircle(turtle,1)
 
+def throwDart(myturtle=None):
+  turtle.penup()
+  turtle.goto(random.uniform(-1,1),random.uniform(-1,1))
+  if isInCircle(turtle):
+        turtle.dot(.1, "red")
+  else:
+        turtle.dot(.1, "green")
+
+def isInCircle(myturtle=None, circle_center_x=0, circle_center_y=0, radius=0):
+  return turtle.distance(0,0)<=1
+  
+def montePi(myturtle=None, num_darts=0):
+    count_inside = 0
+    for dart in range(num_darts):
+        throwDart(turtle)
+        if isInCircle(turtle):
+            count_inside = count_inside+1
+    return (count_inside/num_darts)*sides_square
 
   
-  
+
 
 
 #########################################################
